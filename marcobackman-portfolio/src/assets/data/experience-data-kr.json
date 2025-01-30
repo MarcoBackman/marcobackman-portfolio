@@ -1,7 +1,18 @@
 [
   {
-    "fromDate" : "2022-10-24",
+    "fromDate" : "2024-09",
     "toDate" : "",
+    "occupation" : "플랫폼팀 풀트택 개발자/ 연구원",
+    "company" : "비전스페이스",
+    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
+    "task-list" : [
+      "test1", "test2"
+    ]
+  },
+  {
+    "fromDate" : "2022-07",
+    "toDate" : "2024-05",
+    "occupation" : "Mutual Fund 팀 Java Backend 개발자",
     "status" : [
       "배포 완료", "SI/SM"
     ],
@@ -12,18 +23,9 @@
     ]
   },
   {
-    "fromDate" : "2022-10-24",
-    "toDate" : "2023-05-24",
-    "company" : "BeaconFire (DriveWealth)",
-    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
-    "task-list" : [
-      "test1", "test2"
-    ]
-  },
-  {
-    "fromDate" : "2022-10-24",
-    "toDate" : "2023-05-24",
-    "company" : "BeaconFire (DriveWealth)",
+    "fromDate" : "2019-09",
+    "toDate" : "2021-05",
+    "company" : "대한민국 해군",
     "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
     "task-list" : [
       "test1", "test2"
@@ -31,5 +33,17 @@
     "skills" : [
       "java spring", "react"
     ]
+  },
+  {
+    "fromDate" : "2017-08",
+    "toDate" : "2019-05",
+    "company" : "한인 학생회 KSA 부회장",
+    "job-description" : ""
+  },
+  {
+    "fromDate" : "2013-01",
+    "toDate" : "2013-08",
+    "company" : "로보링크 인턴",
+    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자"
   }
 ]

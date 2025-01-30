@@ -178,7 +178,7 @@ function MainPage() {
     // Fetch experience data from the JSON file
     const fetchSkillData = async () => {
         try {
-            const response = await import("../assets/data/skills.json"); // Using dynamic import
+            const response = await import("../assets/data/skills-kr.json"); // Using dynamic import
             setSkillData(response.default); // Update the state with loaded data
             console.log(response.default);
         } catch (error) {
