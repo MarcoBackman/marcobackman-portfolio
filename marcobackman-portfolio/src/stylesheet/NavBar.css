@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Hakgyoansim';
+    src: url('../assets/fonts/Hakgyoansim Badasseugi TTF L.ttf') format('');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tenada';
+    src: url('../assets/fonts/Tenada.ttf') format('');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header.nav-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: #F7F7FF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0); /* Default position */
+    transition: transform 0.3s ease; /* Smooth transition for hiding and showing */
+    z-index: 1000;
+
+    & div.nav-bar-left-section {
+        display: flex;
+        width: 65%;
+        height: 100%;
+        align-self: center;
+        align-items: center;
+        align-content: center;
+        min-width: 450px;
+
+        & .nav-bar-link-left {
+            display: flex;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+
+            & a {
+                color: #577399;
+                transition-duration: 0.2s;
+            }
+
+            & a:hover {
+                color: #FE5F55;
+                transition-duration: 0.2s;
+            }
+        }
+    }
+
+    & div.nav-bar-right-section {
+        display: flex;
+        width: 35%;
+        height: 100%;
+        min-width: 370px;
+
+        & .nav-bar-link-right {
+            display: flex;
+            flex-flow: row-reverse;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+
+            & a {
+                color: #577399;
+                transition-duration: 0.2s;
+            }
+
+            & a:hover {
+                color: #FE5F55;
+                transition-duration: 0.2s;
+            }
+        }
+    }
+}
+
+/* Hide the navbar by translating it upwards */
+.nav-bar.hidden {
+    transform: translateY(-100%);
+}
+
+a.logo-link > img {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin: 25px 1em 25px 1em;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+}
+
+a.logo-link:hover > img {
+    height: 60px;
+    width: 60px;
+    transition-duration: 0.2s;
+}
+
+.nav-bar-link-right .active {
+    font-weight: bold; /* Bold styling */
+    color: #7998ba;    /* Optional: Highlight color for active link */
+    text-decoration: underline; /* Optional: Underline the active link */
+}
+
+.nav-bar-link-btn {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 1em 0 1em;
+}
+
+img.status-icon {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    margin-right: 0.5em;
+}
+
+#service-status-hover-text {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    margin-top: 0;
+    margin-left: -50px;
+    transform: translateX(-50%);
+    background-color: #577399;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.1s ease, visibility 0.3s ease;
+    z-index: 10;
+
+    & img {
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+    }
+}
+
+.nav-bar-link-btn:hover #service-status-hover-text {
+    visibility: visible;
+    opacity: 1;
+}

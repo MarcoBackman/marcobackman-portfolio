@@ -1,0 +1,120 @@
+div.experience-panel {
+    display: block;
+    width: 100%;
+}
+
+div.experience-card {
+    display: flex;
+    font-family: 'Hakgyoansim', cursive, sans-serif;
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    position: relative;
+    min-height: 250px;
+}
+
+div.left-section {
+    display: block;
+    width: 27%;
+    min-width: 300px;
+    margin-left: 3%;
+    text-align: right;
+
+    & div.date {
+        width: 100%;
+        cursor: default;
+      & h3.year-month-label {
+          width: 80%;
+          font-family: 'HangamePokerRegular', cursive;
+          color: #6d7781;
+      }
+    }
+
+    & div.status-cards {
+        display: flex;
+        width: 80%;
+        flex-direction: row-reverse;
+
+        & div.total-year-month,
+        div.info-label {
+            border-radius: 4px;
+            padding: 1px 3px 1px 3px;
+            font-size: 12px;
+            margin-left: 4px;
+            color: white;
+            font-weight: bold;
+            font-family: 'Hakgyoansim', cursive;
+            cursor: default;
+        }
+
+        & div.total-year-month {
+            background-color: #66a887;
+        }
+
+        & div.info-label {
+            background-color: #1e50ff;
+        }
+    }
+}
+
+div.right-section {
+    display: block;
+    width: 70%;
+    min-width: 350px;
+
+    & div.company-name {
+        width: 100%;
+        & h3 {
+            margin: 10px 0 0 0;
+            color: #495867;
+            font-size: 32px;
+            font-family: 'HangamePokerSemiBold', cursive;
+            cursor: default;
+        }
+    }
+
+    & div.job-description {
+        & p {
+            font-style: italic;
+            cursor: default;
+        }
+    }
+
+    & div.work-list {
+        display: flex;
+        flex-direction: column;
+        font-family: 'HangamePokerRegular', 'Batang', cursive;
+        font-size: 16px;
+        color: #2b323c;
+        font-weight: 500;
+        margin: 5px 0 5px 0;
+        padding: 0;
+
+        & ul {
+            margin: 0;
+            cursor: default;
+        }
+    }
+
+    & div.skill-list {
+        & ul {
+            display: flex;
+            padding: 0;
+            margin-left: 1.2em;
+            list-style: none;
+            cursor: default;
+            & li {
+                list-style: none;
+                border-radius: 4px;
+                padding: 1px 3px 4px 3px;
+                font-size: 12px;
+                margin-left: 4px;
+                color: white;
+                font-weight: bold;
+                font-family: 'Hakgyoansim', cursive;
+                background-color: #4c4c4c;
+                cursor: default;
+            }
+        }
+    }
+}

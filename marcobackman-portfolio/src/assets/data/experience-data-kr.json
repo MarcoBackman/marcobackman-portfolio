@@ -1,0 +1,35 @@
+[
+  {
+    "fromDate" : "2022-10-24",
+    "toDate" : "",
+    "status" : [
+      "배포 완료", "SI/SM"
+    ],
+    "company" : "BeaconFire (DriveWealth)",
+    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
+    "task-list" : [
+      "테스트1", "테스트2"
+    ]
+  },
+  {
+    "fromDate" : "2022-10-24",
+    "toDate" : "2023-05-24",
+    "company" : "BeaconFire (DriveWealth)",
+    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
+    "task-list" : [
+      "test1", "test2"
+    ]
+  },
+  {
+    "fromDate" : "2022-10-24",
+    "toDate" : "2023-05-24",
+    "company" : "BeaconFire (DriveWealth)",
+    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
+    "task-list" : [
+      "test1", "test2"
+    ],
+    "skills" : [
+      "java spring", "react"
+    ]
+  }
+]

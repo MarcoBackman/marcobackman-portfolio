@@ -1,0 +1,60 @@
+{
+  "common": {
+    "navBar" : {
+      "projectBtn" : "프로젝트",
+      "experienceBtn" : "경력",
+      "skillsBtn" : "기술스택",
+      "educationBtn" : "학력",
+      "abilityBtn" : "업무 역량",
+      "jobMethod" : "작업방식",
+      "contact" : "연락처",
+      "serviceConn" : "서비스 연결 중",
+      "serviceLogin" : "데모 체험",
+      "serviceOnline" : "서비스 온라인",
+      "serviceOffLine" : "서비스 오프라인"
+    },
+    "footer" :{
+      "addressLabel" : "주소",
+      "addressContent" : "서울시 서초구 양재대로 2길",
+      "emailLabel" : "이메일",
+      "phoneLabel" : "전화번호",
+      "countryLabelKr" : "한국",
+      "countryLabelUs" : "미국",
+      "webSourceText" : "해당 웹사이트 코드 보기",
+      "techniqueExplainText" : "해당 웹사이트와 서버는 다음 기술을 사용합니다.",
+      "reactText" : "반응형 웹 - 리엑트@18.3.1",
+      "htmlCssText" : "웹 디자인",
+      "goText" : "API서버 - Go Lang",
+      "javaSpringText" : "보안, ORM, 알림 - Java Spring 3"
+    }
+  },
+  "mainPage": {
+    "mainImage" : {
+      "firstText" : "풀스택 개발자 백승준",
+      "secondText" : "\"프론트, 백앤드, DB 관리와, 클라우드 서비스, 자동화 시스템 구축\"",
+      "thirdText" : "당신의 마니또가 되어 개발 업무 협업과 서비스 혁신을 책임져 드립니다"
+    },
+    "aboutMe" : {
+      "aboutMeTitle" : "저...저는요...!"
+    },
+    "project" : {
+      "projectTitle" : "최근 프로젝트"
+    },
+    "experience" : {
+      "experienceTitle" : "경력",
+      "currentJobLabel" : "재직 중"
+    },
+    "skills" : {
+      "skillsTitle" : "기술스택"
+    },
+    "education" : {
+      "educationTitle" : "학력/자격증"
+    },
+    "ability" : {
+      "abilityTitle" : "업무 역량"
+    },
+    "contact" : {
+      "contactTitle" : "연락처"
+    }
+  }
+}

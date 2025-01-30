@@ -1,0 +1,57 @@
+.main {
+  display: flex;
+  width: 100%;
+}
+
+button {
+  border: none;
+  color: #495867;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  font-family: Tenada, sans-serif;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #FE5F55;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #ff3b2c;
+  color: white;
+  font-size: 28px;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
