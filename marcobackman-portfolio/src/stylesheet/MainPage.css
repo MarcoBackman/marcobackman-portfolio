@@ -10,29 +10,31 @@ div#main-img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 390px;
+    min-height: 150px;
+    max-height: 300px;
     margin-top: 100px;
+    border-radius: 25%;
     z-index: 1;
 
     & h1 {
         display: block;
         position: relative;
-        color: #F7F7FF;
-        text-shadow: 2px 2px 25px rgb(0, 0, 0);
+        color: #495867;
         font-family: 'HangamePokerSemiBold', sans-serif;
-        padding: 1em 0;
+        padding: 1.2em 0;
         text-align: center;
-        font-size: 55px;
+        font-size: 40px;
+        margin: 0;
         opacity: 0;
-        animation: fadeIn 0.5s ease-in forwards;
+        animation: fadeIn 0.4s ease-in forwards;
         animation-delay: 0.5s;
+        min-width: 900px;
     }
 
     & h3 {
         display: block;
         position: relative;
-        color: #F7F7FF;
-        text-shadow: 2px 2px 55px rgb(0, 0, 0);
+        color: #ff3b2c;
         font-family: 'HangamePokerSemiBold', sans-serif;
         padding: 1em 0;
         text-align: center;
@@ -40,7 +42,7 @@ div#main-img {
         margin: 0;
         opacity: 0;
         animation: fadeIn 0.4s ease-in forwards;
-        animation-delay: 1s;
+        animation-delay: 0.5s;
     }
 }
 
@@ -49,16 +51,16 @@ div#main-img::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 110%;
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    align-items: center;
     height: 100%;
-    z-index: -1; /* Push the background below the main div content */
-    background-image: url("../assets/static/main-background.jpg");
+    background-color: #F7F7FF;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    transform: scaleX(1.05);
+    background-position: left center;
     transform-origin: center;
-    filter: blur(4px); /* Apply blur to the background */
 }
 
 @keyframes fadeIn {
@@ -87,18 +89,97 @@ section.main-page-section {
     padding: 0.5em 0 0.5em 0;
 }
 
-section#about-me {
+section#aboutMe {
     padding: 2.5em 0 1em 0;
     background-color: white;
-    height: 1000px;
-    min-width: 1000px;
+    margin: 1em auto 5em auto;
+    width: 100%;
+    min-height: 700px;
+    height: 800px;
 
     & h1 {
         opacity: 0;
         animation: fadeIn 0.2s ease-in forwards;
-        animation-delay: 2s;
+        animation-delay: 0.5s;
     }
 }
+
+section#aboutMe > .about-me-wrapper {
+    display: block;
+    width: 80%;
+    height: 100%;
+    border: #859eb1 solid 1px;
+    min-width: 1500px;
+    border-radius: 28px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+h1.centered-custom-title {
+    font-size: 1.8rem;
+    color: #577399;
+    background-color: #ffffff;
+    padding: 10px 5em;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    min-width: 120px;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-weight: bold;
+    font-family: Tenada, sans-serif;
+}
+
+div.about-me-content {
+    display: flex;
+    text-align: center;
+    min-height: 350px;
+    width: 80%;
+    min-width: 1200px;
+    margin: 5em auto 2em auto;
+}
+
+div.about-me-content > img {
+    height: auto;
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: -2px 4px 4px #495867;
+    border: 1px solid #495867;
+    object-fit: cover;
+    max-height: 650px;
+}
+
+div.about-me-text-area {
+    display: block;
+    width: 95%;
+    margin-left: 5%;
+    min-width: 700px;
+}
+
+div.about-me-text-area > p {
+    display: flex;
+    font-family: 'HangamePokerRegular', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    margin: 16px 0;
+    color: #495867;
+    line-height: 2em;
+    flex-wrap: initial;
+    align-items: baseline;
+    word-break: normal;
+    white-space: normal;
+}
+
+div.about-me-text-area > p > span {
+    flex: 0 0 auto;
+    color: #FE5F55;
+    font-family: 'HangamePokerRegular', 'Batang', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin-right: 8px;
+}
+
 
 @keyframes fadeIn {
     from {
@@ -116,11 +197,50 @@ section#project {
     padding: 2.5em 0 1em 0;
 }
 
+section#aboutMe h1.centered-title {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    color: #577399;
+    width: 100%;
+    min-width: 250px;
+    z-index: 1;
+    margin: 0 auto;
+    font-weight: bold;
+    font-family: Tenada, sans-serif;
+}
+
+section#aboutMe h1.centered-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(-25px - 5%);
+    transform: scaleX(0.8);
+    transform-origin: left;
+    height: 2px;
+    width: calc(41% + 30px);
+    background-color: #495867;
+    transition: transform 0.8s ease;
+}
+
+section#aboutMe h1.centered-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: calc(-25px - 5%);
+    transform: scaleX(0.8);
+    transform-origin: right;
+    height: 2px;
+    width: calc(41% + 30px);
+    background-color: #495867;
+    transition: transform 0.8s ease;
+}
+
 section#project h1.centered-title {
     position: relative;
     text-align: center;
     font-size: 2rem;
-    color: #495867;
+    color: #577399;
     width: 100%;
     min-width: 250px;
     z-index: 1;
@@ -139,7 +259,7 @@ section#project h1.centered-title::before {
     transform-origin: left;
     height: 2px;
     width: calc(41% + 30px);
-    background-color: #495867;
+    background-color: #577399;
     transition: transform 0.8s ease;
 }
 
@@ -153,7 +273,7 @@ section#project h1.centered-title::after {
     transform-origin: right;
     height: 2px;
     width: calc(41% + 30px);
-    background-color: #495867;
+    background-color: #577399;
     transition: transform 0.8s ease;
 }
 
@@ -174,8 +294,27 @@ section#experience {
 }
 
 section#skills {
-    min-height: 1000px;
     background-color: #F7F7FF;
+}
+
+div.skill-panel {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+div.skill-panel > h2 {
+    display: flex;
+    width: 50%;
+    font-family: 'HangamePokerRegular', 'Batang', cursive;
+    color: #2b323c;
+}
+
+div.skill-card-list {
+    display: block;
+    position: relative;
+    width: 50%;
+    margin: 1em auto;
 }
 
 section#education {
@@ -213,7 +352,7 @@ h1.left-title {
     position: relative;
     text-align: left;
     font-size: 2rem;
-    color: #495867;
+    color: #577399;
     width: 100%;
     min-width: 250px;
     z-index: 1;
@@ -231,7 +370,7 @@ h1.left-title::after {
     transform-origin: left;
     height: 2px;
     width: calc(90%);
-    background-color: #495867;
+    background-color: #577399;
     transition: transform 2s ease;
 }
 

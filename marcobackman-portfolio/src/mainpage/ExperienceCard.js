@@ -33,8 +33,8 @@ function ExperienceCard({data}) {
         totalYearMonth = `${years !== 0 ? years + "Y" : ""}  ${months !== 0 ? months + "M" : ""} `;
     };
 
-    const singleList = (content) => {
-        return <li className={"work-description-list"}>{content}</li>
+    const singleList = (index, content) => {
+        return <li key={index} className={"work-description-list"}>{content}</li>
     }
 
     const skillLabel = (skill) => {
@@ -71,12 +71,12 @@ function ExperienceCard({data}) {
                 </div>
                 <div className={"work-list"}>
                     <ul>
-                        {taskList && taskList.map((task) => singleList(task))}
+                        {taskList && taskList.map((index, task) => singleList(index, task))}
                     </ul>
                 </div>
                 <div className={"skill-list"}>
                     <ul>
-                        {skills && skills.map((skill) => singleList(skill))}
+                        {skills && skills.map((index, skill) => singleList(index, skill))}
                     </ul>
                 </div>
             </div>

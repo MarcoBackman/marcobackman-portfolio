@@ -1,3 +1,14 @@
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  overflow: auto;
+  position: relative;
+  cursor: default;
+}
+
+
 .main {
   display: flex;
   width: 100%;
@@ -29,12 +40,12 @@ a {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  z-index: 1500;
+  z-index: 100;
   opacity: 0;
   visibility: hidden;
 
   transition-property: opacity, transform;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
 }
 

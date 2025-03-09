@@ -2,8 +2,10 @@ import './stylesheet/App.css';
 import { Routes, Route } from 'react-router-dom';
 import MainPage from "./mainpage/MainPage";
 import PageNotFound from "./common/PageNotFound";
+import smoothscroll from 'smoothscroll-polyfill';
 
 function App() {
+    smoothscroll.polyfill();
   return (
     <div className="main">
         <Routes>

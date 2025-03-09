@@ -22,14 +22,11 @@ export const TranslationProvider = ({ children }) => {
     useEffect(() => {
         const loadTranslations = async () => {
             try {
-                console.log('Fetching translations for language:', language);
                 const response = await fetch(`/locales/${language}.json`);
-                console.log('Fetch response:', response);
                 if (!response.ok) {
                     throw new Error(`Failed to load ${language} translations`);
                 }
                 const data = await response.json();
-                console.log('Loaded data:', data); // Ensure data is correct
                 setMessages(data);
                 globalMessages = data;
             } catch (err) {

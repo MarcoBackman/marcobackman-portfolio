@@ -1,0 +1,61 @@
+div.skill-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 1em auto 2em auto;
+    height: 100%;
+    border: 1px solid #2b323c;
+    border-radius: 12px;
+}
+
+div.skill-card-title {
+    display: flex;
+    width: 100%;
+    background-color: #2b323c;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    height: 45px;
+}
+
+div.skill-card-title > h2 {
+    display: block;
+    font-size: 17px;
+    font-family: 'HangamePokerBold', 'Batang', sans-serif;
+    width: 100%;
+    margin: 10px auto;
+    color: white;
+    text-align: left !important;
+    text-indent: 1.5em;
+}
+
+div.skill-card-list-container {
+    display: block;
+    background-color: white;
+    margin: 0;
+}
+
+div.skill-card-list-container > ul {
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Hakgyoansim', cursive, sans-serif;
+}
+
+div.skill-card-list-container > ul > li {
+    padding: 0 0 5px 0;
+}
+
+div.end-of-skill-card {
+    display: block;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    height: 20px;
+}
+
+p.skill-detail-placeholder {
+    margin: 0 auto;
+    padding-top: 5px;
+    text-indent: 1em;
+}

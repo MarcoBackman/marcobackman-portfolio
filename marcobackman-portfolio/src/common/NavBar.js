@@ -2,6 +2,7 @@ import '../stylesheet/NavBar.css';
 import {useTranslation} from "../context/TranslationContext";
 import {useEffect, useState} from "react";
 import {Blocks, ColorRing, DNA, Triangle} from "react-loader-spinner";
+import {smoothScroll} from "../common/SmoothScroll";
 
 function NavBar({backendOnline, isLoading}) {
 
@@ -44,36 +45,42 @@ function NavBar({backendOnline, isLoading}) {
                     <a
                         className={`nav-bar-link-btn`}
                         href={'#project'}
+                        onClick={(e) => smoothScroll(e, 'project')}
                     >
                         {navBarMsg?.projectBtn}
                     </a>
                     <a
                         className={`nav-bar-link-btn`}
                         href={'#experience'}
+                        onClick={(e) => smoothScroll(e, 'experience')}
                     >
                         {navBarMsg?.experienceBtn}
                     </a>
                     <a
                         className={`nav-bar-link-btn`}
                         href={'#skills'}
+                        onClick={(e) => smoothScroll(e, 'skills')}
                     >
                         {navBarMsg?.skillsBtn}
                     </a>
                     <a
                         className={`nav-bar-link-btn`}
                         href={'#education'}
+                        onClick={(e) => smoothScroll(e, 'education')}
                     >
                         {navBarMsg?.educationBtn}
                     </a>
                     <a
                         className={`nav-bar-link-btn`}
                         href={'#ability'}
+                        onClick={(e) => smoothScroll(e, 'ability')}
                     >
                         {navBarMsg?.abilityBtn}
                     </a>
                     <a
                         className={`nav-bar-link-btn`}
                         href={'#contact'}
+                        onClick={(e) => smoothScroll(e, 'contact')}
                     >
                         {navBarMsg?.contact}
                     </a>
