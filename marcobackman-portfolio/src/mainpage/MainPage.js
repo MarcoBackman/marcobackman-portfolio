@@ -13,6 +13,8 @@ import FourthProjectImg from "../assets/static/aod-flow.png"
 import FifthProjectImg from "../assets/static/aod-exchange-flow.png"
 import SixthProjectImg from "../assets/static/tax-report-application-flow.png"
 import DefaultImgIcon from "../assets/icon/default_img.png"
+import EducationCard from "./EducationCard";
+import CertificateCard from "./CertificateCard";
 
 function MainPage() {
 
@@ -25,14 +27,16 @@ function MainPage() {
     const mainPageText = messages?.mainPage || {};
     const frameWorkTextList = messages?.mainPage?.aboutMe?.frameworkTextList;
 
-    const [experienceData, setExperienceData] = useState([]);
+    const [careerData, setCareerData] = useState([]);
     const [skillData, setSkillData] = useState([]);
+    const [educationData, setEducationData] = useState([]);
+    const [certificateData, setCertificateData] = useState([]);
 
     // Track which sections have been loaded
     const [sectionStates, setSectionStates] = useState({
         aboutMe: false,
         project: false,
-        experience: false,
+        career: false,
         skills: false,
         education: false,
         ability: false,
@@ -43,7 +47,7 @@ function MainPage() {
     const sectionRefs = useRef({
         aboutMe: null,
         project: null,
-        experience: null,
+        career: null,
         skills: null,
         education: null,
         ability: null,
@@ -195,10 +199,10 @@ function MainPage() {
     };
 
     // Fetch experience data from the JSON file
-    const fetchExperienceData = async () => {
+    const fetchCareerData = async () => {
         try {
-            const response = await import("../assets/data/experience-data-kr.json");
-            setExperienceData(response.default);
+            const response = await import("../assets/data/career-data-" + language + ".json");
+            setCareerData(response.default);
         } catch (error) {
             console.error("Failed to load experience data:", error);
         }
@@ -207,17 +211,37 @@ function MainPage() {
     // Fetch experience data from the JSON file
     const fetchSkillData = async () => {
         try {
-            const response = await import("../assets/data/skills-kr.json");
+            const response = await import("../assets/data/skills-" + language + ".json");
             setSkillData(response.default);
         } catch (error) {
             console.error("Failed to load experience data:", error);
         }
     };
 
+    const fetchEducationData = async () => {
+        try {
+            const response = await import("../assets/data/education-" + language + ".json");
+            setEducationData(response.default);
+        } catch (error) {
+            console.error("Failed to load experience data:", error);
+        }
+    }
+
+    const fetchCertificateData = async () => {
+        try {
+            const response = await import("../assets/data/certificate-" + language + ".json");
+            setCertificateData(response.default);
+        } catch (error) {
+            console.error("Failed to load experience data:", error);
+        }
+    }
+
     useEffect(() => {
         checkBackendConnection(); // Automatically check backend on page load
-        fetchExperienceData(); // Load experience data from the JSON file
+        fetchCareerData(); // Load experience data from the JSON file
         fetchSkillData();
+        fetchEducationData();
+        fetchCertificateData();
     }, []);
 
     return (
@@ -232,7 +256,7 @@ function MainPage() {
                 <h1 className="centered-custom-title">{mainPageText?.aboutMe?.aboutMeTitle}</h1>
                 <div className={"about-me-wrapper"}>
                     <div className={"about-me-content"}>
-                        <img id={"about-me-img"} src={"/images/my_img.JPG"} alt={""}/>
+                        <img id={"about-me-img"} src={"/images/profile.png"} alt={""}/>
                         <div className={"about-me-text-area"}>
                             <p>{mainPageText?.aboutMe?.aboutMeContent}</p>
                             <p>
@@ -312,12 +336,12 @@ function MainPage() {
                     />
                 </div>
             </section>
-            <section id={"experience"}
-                     ref={(el) => (sectionRefs.current.experience = el)}
-                     className={sectionStates.experience ? "main-page-section visible" : "main-page-section"}>
+            <section id={"career"}
+                     ref={(el) => (sectionRefs.current.career = el)}
+                     className={sectionStates.career ? "main-page-section visible" : "main-page-section"}>
                 <h1 className="left-title">{mainPageText?.experience?.experienceTitle}</h1>
                 <div className={"experience-panel"}>
-                    {experienceData.map((data, index) => (
+                    {careerData.map((data, index) => (
                         <ExperienceCard key={index} data={data}/>
                     ))}
                 </div>
@@ -343,6 +367,24 @@ function MainPage() {
                      ref={(el) => (sectionRefs.current.education = el)}
                      className={sectionStates.education ? "main-page-section visible" : "main-page-section"}>
                 <h1 className="left-title">{mainPageText?.education?.educationTitle}</h1>
+                <div className={"education-certificate-panel"}>
+                    <h3>🏅 {mainPageText?.education?.certificateSubTitle} 🏆</h3>
+                    <div className={"certificate-card-list"}>
+                        {
+                            certificateData.map((data, index) => (
+                                <CertificateCard key={index} data={data}/>
+                            ))
+                        }
+                    </div>
+                    <h3>{mainPageText?.education?.educationSubTitle} 🎓</h3>
+                    <div className={"education-card-list"}>
+                        {
+                            educationData.map((data, index) => (
+                                <EducationCard key={index} data={data}/>
+                            ))
+                        }
+                    </div>
+                </div>
             </section>
             <section id={"ability"}
                      ref={(el) => (sectionRefs.current.ability = el)}

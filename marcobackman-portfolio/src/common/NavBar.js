@@ -51,8 +51,8 @@ function NavBar({backendOnline, isLoading}) {
                     </a>
                     <a
                         className={`nav-bar-link-btn`}
-                        href={'#experience'}
-                        onClick={(e) => smoothScroll(e, 'experience')}
+                        href={'#career'}
+                        onClick={(e) => smoothScroll(e, 'career')}
                     >
                         {navBarMsg?.experienceBtn}
                     </a>

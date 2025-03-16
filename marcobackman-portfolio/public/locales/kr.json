@@ -35,7 +35,7 @@
     },
     "aboutMe" : {
       "aboutMeTitle" : "본인 소개",
-      "aboutMeContent" : "고등학생때 시작한 로봇 교육과 인턴활동을 통해 프로그래밍을 배워왔던 저는 컴퓨터 프로그래밍의 가성비에 이끌려 미국 플로리다 공대 컴퓨터과학과로 진로를 선택한 후, 중도에 해군 전산병으로 지원을 해 통신의 기반이 되는  Physical 레이어, DataLink 레이어와 Network 레이어를 경험하게 되었고, 이 경험을 바탕으로 'State Machine Diagram 모델' 기반의 IoT 프로젝트를 팀리더로 진행하여 학과 2위를 달성했습니다. 학사졸업 후 뉴저지에서 미국 펀드 트레이드 회사에서 약 2년간 백오피스에서 개발을 진행했으며 고국으로 돌아와 디지털 트윈 스타트업 회사에서 PaaS와 SaaS 플랫폼 개발을 진행하고있습니다.",
+      "aboutMeContent" : "고등학생 때 시작한 로봇 교육과 인턴활동을 통해 프로그래밍을 배워왔던 저는 컴퓨터 프로그래밍의 가성비에 이끌려 미국 플로리다 공대 컴퓨터과학과로 진로를 선택한 후, 중도에 해군 전산병으로 지원을 해 디바이스간 통신의 기반이 되는 Physical 레이어, DataLink 레이어와 Network 레이어 장비를 경험하게 되었고, 이 경험을 바탕으로 'State Machine Diagram 모델' 기반의 IoT 프로젝트를 팀리더로 진행하여 학과 2위를 달성했습니다. 학사졸업 후 뉴저지에서 미국 펀드 트레이드 회사에서 약 2년간 백오피스에서 개발을 진행했으며 고국으로 돌아와 디지털 트윈 스타트업 회사에서 PaaS와 SaaS 플랫폼 개발을 진행하고있습니다.",
       "objectiveLabel" : "개발자로서의 10년간 목표",
       "objectiveContent" : "개발 기본기를 전부 갖추고 팀 관리에 필요한 노하우를 경험해 방대한 소프트웨어 개발 프로젝트에 전문이 될 수 있는 팀 리더가 되는 것이 꿈입니다.",
       "strength" : "강점",
@@ -52,7 +52,7 @@
         },
         "javaSpringSection": {
           "title": "주요 분야 2 : Java Spring 프레임워크",
-          "content": "Java 기반의 강력한 백엔드 개발 프레임워크로 유연성과 생산성을 제공."
+          "content": "Java 기반의 강력한 백엔드 개발 프레임워크로 유연성과 생산성을 제공. REST API 서비스 경험, 로드밸런싱을 위한 Gateway 서비스 구축, JSP를 이용한 백앤드 랜더링 서버 개발. 서비스간 통신을 위한 Kafka, AMQ, MQTT, 그리고 RestTemplate 활용."
         },
         "awsSection": {
           "title": "주요 분야 3 :AWS 서비스",
@@ -102,6 +102,8 @@
     },
     "education" : {
       "educationTitle" : "학력/자격증",
+      "certificateSubTitle" : "자격증 / 수상",
+      "educationSubTitle" : "교육 이력",
       "education" : [
         {
           "from" : "9999",
