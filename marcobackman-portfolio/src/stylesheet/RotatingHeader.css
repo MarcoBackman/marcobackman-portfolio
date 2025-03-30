@@ -52,12 +52,12 @@ div.representative-framework-text-area {
     background-color: #2b323c;
     height: 100%;
     color: white;
-    padding: 0 1em 0 2em;
+    padding: 0 1em 0 1.5em;
     border-radius: 0 8px 8px 0;
 }
 
 div.representative-framework-text-area > p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 div.rotating-header-visible {

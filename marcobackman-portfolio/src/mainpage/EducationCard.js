@@ -1,6 +1,6 @@
 
 
-function EducationCard({key, data}) {
+function EducationCard({id, data}) {
     let title = data?.title || '';
     let acquiredDate = data?.endDate || '';
     let institution = data?.institution || '';
@@ -10,8 +10,8 @@ function EducationCard({key, data}) {
     let imgUrl = data?.imgUrl || '';
 
     return (
-        <div className={"education-card"} key={key}>
-            <div className={"education-card-header"}>
+        <div id={id} className={"education-card"}>
+            <div className={"education-card-header first-row"}>
                 <h4>{acquiredDate.replace("-", " / ")}</h4>
                 <h3>{title}</h3>
             </div>

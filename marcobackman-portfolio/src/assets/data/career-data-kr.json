@@ -4,7 +4,7 @@
     "toDate" : "",
     "occupation" : "플랫폼팀 풀트택 개발자/ 연구원",
     "company" : "비전스페이스",
-    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
+    "job-description" : "B2B&SaaS 클라우드형 인공지능 형 물류/공장 디지털 트윈 서비스 제공",
     "is-development-career" : true,
     "task-list" : [
       "test1", "test2"
@@ -18,7 +18,7 @@
       "배포 완료", "SI/SM"
     ],
     "company" : "BeaconFire (DriveWealth)",
-    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
+    "job-description" : "미국 상호펀드 주문처리 코어 시스템 개발&구축 자바 백엔드 개발자로 활동",
     "is-development-career" : true,
     "task-list" : [
       "테스트1", "테스트2"
@@ -28,14 +28,8 @@
     "fromDate" : "2019-09",
     "toDate" : "2021-05",
     "company" : "대한민국 해군",
-    "job-description" : "미국 상호펀드 주문처리 시스템 개발 구축 백엔드 개발자",
-    "is-development-career" : true,
-    "task-list" : [
-      "test1", "test2"
-    ],
-    "skills" : [
-      "java spring", "react"
-    ]
+    "job-description" : "통신/전산병 병장 만기제대",
+    "is-development-career" : false
   },
   {
     "fromDate" : "2017-08",
@@ -48,7 +42,7 @@
     "fromDate" : "2013-01",
     "toDate" : "2013-08",
     "company" : "로보링크 인턴",
-    "is-development-career" : false,
-    "job-description" : ""
+    "is-development-career" : true,
+    "job-description" : "휴머노이드 제작과 개발을 하여 여러 대회에 출전"
   }
 ]

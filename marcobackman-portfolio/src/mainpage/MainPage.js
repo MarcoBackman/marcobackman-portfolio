@@ -8,6 +8,7 @@ import {FaArrowUp} from "react-icons/fa";
 import ExperienceCard from "./ExperienceCard";
 import SkillCard from "./SkillCard";
 import RotatingHeader from "./RotatingHeader";
+import FirstProjectImg from "../assets/static/platform-cicd.png"
 import SecondProjectImg from "../assets/static/NEW플램폼팀_v0.3.png"
 import FourthProjectImg from "../assets/static/aod-flow.png"
 import FifthProjectImg from "../assets/static/aod-exchange-flow.png"
@@ -15,6 +16,7 @@ import SixthProjectImg from "../assets/static/tax-report-application-flow.png"
 import DefaultImgIcon from "../assets/icon/default_img.png"
 import EducationCard from "./EducationCard";
 import CertificateCard from "./CertificateCard";
+import {getCurrentDateMonthDate, getTotalDateTimeYear, padToYYYY_MM_DD} from "../util/DateTimeUtil";
 
 function MainPage() {
 
@@ -31,6 +33,7 @@ function MainPage() {
     const [skillData, setSkillData] = useState([]);
     const [educationData, setEducationData] = useState([]);
     const [certificateData, setCertificateData] = useState([]);
+    const [totalExperienceYearMonth, setTotalExperienceYearMonth] = useState({});
 
     // Track which sections have been loaded
     const [sectionStates, setSectionStates] = useState({
@@ -136,6 +139,25 @@ function MainPage() {
             behavior: "smooth", // Smooth scrolling animation
         });
     };
+
+    const calculateTotalCareerYearMonth = async () => {
+        if (careerData) {
+            const filteredCareerData = careerData
+                .filter((element) => element['is-development-career'] === true )
+                .map((filteredDateSet) => {
+
+                    let paddedFromDate = padToYYYY_MM_DD(filteredDateSet.fromDate || ""); // Pad the fromDate
+                    let paddedToDate = padToYYYY_MM_DD(filteredDateSet.toDate || getCurrentDateMonthDate());
+
+                    if (filteredDateSet.toDate === null || !filteredDateSet.toDate || filteredDateSet.toDate === "") {
+                        paddedToDate = getCurrentDateMonthDate();
+                    }
+                    return {paddedFromDate, paddedToDate};
+                });
+            const totalCareerDate = getTotalDateTimeYear(filteredCareerData);
+            setTotalExperienceYearMonth(totalCareerDate);
+        }
+    }
 
     const frameworkInfo = () => {
 
@@ -244,6 +266,10 @@ function MainPage() {
         fetchCertificateData();
     }, []);
 
+    useEffect(() => {
+        calculateTotalCareerYearMonth();
+    }, [careerData]);
+
     return (
         <div id={"main-page"}>
             <NavBar backendOnline={backendOnline} isLoading={isLoading}/>
@@ -287,7 +313,7 @@ function MainPage() {
                 <h1 className="centered-title">{mainPageText?.project?.projectTitle}</h1>
                 <div className={"project-content"}>
                     <ProjectCard
-                        imgSrc=""
+                        imgSrc={FirstProjectImg || DefaultImgIcon}
                         YYYYMM="202503"
                         title={mainPageText?.project?.project1?.title}
                         type={mainPageText?.project?.project1?.type}
@@ -303,7 +329,7 @@ function MainPage() {
                         url="https://example.com/project2"
                     />
                     <ProjectCard
-                        imgSrc=""
+                        imgSrc={DefaultImgIcon}
                         YYYYMM="202401"
                         title={mainPageText?.project?.project3?.title}
                         type={mainPageText?.project?.project3?.type}
@@ -339,7 +365,12 @@ function MainPage() {
             <section id={"career"}
                      ref={(el) => (sectionRefs.current.career = el)}
                      className={sectionStates.career ? "main-page-section visible" : "main-page-section"}>
-                <h1 className="left-title">{mainPageText?.experience?.experienceTitle}</h1>
+                <div className={"total-dev-career-date-wrapper"}>
+                    <h1 className="left-title">{mainPageText?.experience?.experienceTitle}</h1>
+                    <p className={"total-dev-career-date"}>
+                        {mainPageText?.experience?.totalCareerLabelText} - {totalExperienceYearMonth.totalYears}{mainPageText?.experience?.yearLabelText} {totalExperienceYearMonth.remainingMonths}{mainPageText?.experience?.monthLabelText}
+                    </p>
+                </div>
                 <div className={"experience-panel"}>
                     {careerData.map((data, index) => (
                         <ExperienceCard key={index} data={data}/>
@@ -371,16 +402,26 @@ function MainPage() {
                     <h3>🏅 {mainPageText?.education?.certificateSubTitle} 🏆</h3>
                     <div className={"certificate-card-list"}>
                         {
-                            certificateData.map((data, index) => (
-                                <CertificateCard key={index} data={data}/>
-                            ))
+                            certificateData
+                                .map((data, index) => ({
+                                    ...data,
+                                    id: `certificate-${index}`,
+                                }))
+                                .map((data, index) => (
+                                <CertificateCard key={data.id} id={data.id} data={data}/>
+                                ))
                         }
                     </div>
                     <h3>{mainPageText?.education?.educationSubTitle} 🎓</h3>
                     <div className={"education-card-list"}>
                         {
-                            educationData.map((data, index) => (
-                                <EducationCard key={index} data={data}/>
+                            educationData
+                                .map((data, index) => ({
+                                    ...data,
+                                    id: `education-${index}`,
+                                }))
+                                .map((data, index) => (
+                                <EducationCard key={data.id} id={data.id} index={index} data={data}/>
                             ))
                         }
                     </div>

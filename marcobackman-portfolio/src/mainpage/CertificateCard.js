@@ -1,5 +1,5 @@
 
-function CertificateCard({key, data}) {
+function CertificateCard({id, data}) {
 
     let certificateAcquireDate = data?.endDate || '';
     let title = data?.title || '';
@@ -10,7 +10,7 @@ function CertificateCard({key, data}) {
     let imgUrl = data?.imgUrl || '';
 
     return (
-        <div className={"certificate-card"} key={key}>
+        <div id={id} className={"certificate-card"}>
             <div className={"education-card-header first-row"}>
                 <h4>{certificateAcquireDate.replace("-", " / ")}</h4>
                 <h3>{title}</h3>

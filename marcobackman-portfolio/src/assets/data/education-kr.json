@@ -1,20 +1,19 @@
 [
   {
     "endDate" : "2022-05",
-    "title" : "미국 플로리다 공과대학 컴퓨터학 팀 졸업 작품",
-    "level" : "컴퓨터 공학과 2위",
-    "url" : "https://tcc2021seniorproject.github.io/src/html/about.html",
-    "descriptionList" : [
-      "State Machine 다이이어그램 모델툴로 IoT 임베디드 기기에 적용하여 운영 할 수 있는 코드 변환기와 서비스를 제작",
-      "팀리더로써 프로젝트를 이끌어나가 1년에 걸칙 프로젝트를 마무리 함."
-    ]
-  },
-  {
-    "endDate" : "2022-05",
     "title" : "미국 플로리다 공과대학 컴퓨터학과",
     "level" : "학사 학위 수료",
     "score" : "3.44/4.0",
     "url" : "https://www.fit.edu/",
+    "imgUrl" : "/images/fit.png",
+    "descriptionList" : [
+    ]
+  },
+  {
+    "endDate" : "2017-8",
+    "title" : "연세대학교 국제 서머스쿨",
+    "level" : "교환 학생 수업 수료",
+    "imgUrl" : "/images/yonsei.svg",
     "descriptionList" : [
     ]
   },
@@ -24,6 +23,7 @@
     "institution" : "ELS Language Center",
     "title" : "ELS 미국 어학 교육 이수",
     "url" : "https://www.els.edu/",
+    "imgUrl" : "/images/els-logo.svg",
     "descriptionList" : [
       "미국 전문 영문 교육기관인 ELS에서 심화과정을 통과해 수료증을 이수받음"
     ]
@@ -31,13 +31,15 @@
   {
     "endDate" : "2014",
     "title" : "영동고등학교 졸업",
-    "institution" : "영동고등학교"
+    "institution" : "영동고등학교",
+    "imgUrl" : "/images/영동고.gif"
   },
   {
     "fromDate" : "2010-03",
     "endDate" : "2013-08",
     "institution" : "로보링크",
     "title" : "로봇 전문 과정 수료",
+    "imgUrl" : "/images/robolink.png",
     "descriptionList" : [
       "다이나 믹셀 모터, AC 모터와 DC모터 제어.",
       "Zigbee 통신 및 시리얼 통신을 이용한 로봇 원격 제어",
