@@ -2,12 +2,12 @@
   {
     "fromDate" : "2024-09",
     "toDate" : "",
-    "occupation" : "플랫폼팀 풀트택 개발자/ 연구원",
+    "occupation" : "플랫폼팀 소프트웨어 개발자 / 연구원",
     "company" : "비전스페이스",
     "job-description" : "B2B&SaaS 클라우드형 인공지능 형 물류/공장 디지털 트윈 서비스 제공",
     "is-development-career" : true,
     "task-list" : [
-      "test1", "test2"
+      "", ""
     ]
   },
   {
@@ -21,28 +21,100 @@
     "job-description" : "미국 상호펀드 주문처리 코어 시스템 개발&구축 자바 백엔드 개발자로 활동",
     "is-development-career" : true,
     "task-list" : [
-      "테스트1", "테스트2"
+      "BeaconFire 개발 컨설팅 회사의 일원으로 들어갔으며, DriveWealth 라는 미국 펀드 트레이딩 개발팀에서 펀드 트레이드 개발을 약 일년 반 이상 진행하면서 기업간의 신뢰를 쌓아왔습니다."
+    ],
+    "project-description" : [
+      {
+        "fromDate" : "2024-01",
+        "toDate" : "2024-04",
+        "title" : "금융 거래 데이터 무결성 보고 시스템",
+        "department" : "펀드 개발부서",
+        "tasks" : [
+          {
+            "taskTitle" : "데이터 종합과 분할 색인(aggregation & partition indexing)을 이용하여 100 만개 이상의 데이터 풀에서의 특정 기록 탐색 시간을 한 프로세스당 60 초에서 2 초로 속도 개선."
+          },
+          {
+            "taskTitle" : "DynamoDB, PSQL, MS-SQL 간의 고객 거래 정보 내용 및 오류 보고 시스템 개발."
+          },
+          {
+            "taskTitle" : "스트림 방식의 데이터 참조(Stream fetch)와 커서(Cursor)기법을 이용한 서버 JVM 메모리와 서버 비용 절약. Docker 컨테이너, Flyway, Jooq 를 이용한 테스팅 환경 구성, Junit5 와 JaCoCo 를 이용한 TDD(Test Driven Development)를 수행, Transactional H2 를 기반한 SQL 코드 테스트로 배포 후 문제점 발생 방지."
+          }
+        ]
+      },
+      {
+        "fromDate": "2023-03",
+        "toDate": "2024-04",
+        "title": "금융 거래 데이터 무결성 보고 시스템",
+        "department": "펀드 개발부서",
+        "tasks": [
+          {
+            "taskTitle": "레거시 코드 기반으로 한 Event Driven Architecture(Kinesis, Kafka Stream) 을 활용해 펀드 거래 중앙 처리 시스템 개발을 하여 사용자에게 24시간 펀드 거래 기능을 제공."
+          },
+          {
+            "taskTitle": "S3 버킷, Kinesis, Dynamo, Confluent Kafka 와 같은 각종 클라우드 서비스를 소프트웨어에 접목시켜 서비스 기능확장."
+          },
+          {
+            "taskTitle": "2024 년 1 월 소프트웨어 출시 이후 SM(Software management) - 유지 관리와 성능 개선에 집중.",
+            "taskDescription": [
+              "거래 처리 성능 테스팅 프로그램을 개발을 함으로써 제휴 거래처 프로그램의 문제점을 발견, 보고 후 인정을 받아 다가올 고객 은행 사의 50 만 거래 손실 방지.",
+              "배포된 소프트웨어의 결점을 OpenShift log 를 통해 발견 후 VirtualVM 을 통해 문제점 분석 후 보완하여 잠재적 UX 리스크를 제거",
+              "Health API 호출 시 리소스 소진으로 인한 Kubernetes 의 주기적 재부팅 문제점을 스레드 리소스 재분배와 문제를 야기한 Blocking 프로세스를 커스텀 스레드 풀로 재설정하여 해결.",
+              "Vera code 툴을 이용해 CORS, XSS, CSRF, SSRF, Broken access control, Log visibility, Query Injection 등과 같은 보안 결점을 분석 뒤 보안 팀과 협력하여 보안 개선."
+            ]
+          }
+        ]
+      },
+      {
+        "fromDate": "2022-11",
+        "toDate": "2023-02",
+        "title": "세금 자동 보고 시스템",
+        "department": "사후 금융거래 부서",
+        "tasks": [
+          {
+            "taskTitle": "주식/펀드 투자 상품 배당에 대한 연간 세금 종합 보고서를 Java AWT 를 이용하여 PDF 양식에 맞추어 사내 이메일 API를 통해 100 만 고객 이메일로 보고서 자동 전송 기능을 20분 안에 처리하여 업무 효율성 증대 시킴"
+          },
+          {
+            "taskTitle": "Monolithic architecture 방식을 채택해 효율적으로 EC2 서버에 필요 할 때만 실행되도록 소프트웨어 제작 및 배포."
+          },
+          {
+            "taskTitle": "병렬 스트림 연산 (Parallel stream processing), Caffeine 캐시와 DynamoDB 병렬 스캐닝 기법을 수반하여 기존의 수동 처리시간 효율성을 4800%로 개선."
+          }
+        ]
+      },
+      {
+        "fromDate": "2022-11",
+        "toDate": "2023-02",
+        "title": "시스템 개선 프로젝트",
+        "department": "사후 금융거래 부서",
+        "tasks": [
+          {
+            "taskTitle": "Kafka 분산 처리(Kafka partitioning) 방식으로 커스텀 색인 선택을 사용해 특정 거래 사의 거래 이벤트 병목 현상을 제거하여 Kafka 이벤트 처리 속도를 600% 상승."
+          }
+        ]
+      }
     ]
   },
   {
     "fromDate" : "2019-09",
     "toDate" : "2021-05",
     "company" : "대한민국 해군",
-    "job-description" : "통신/전산병 병장 만기제대",
-    "is-development-career" : false
-  },
-  {
-    "fromDate" : "2017-08",
-    "toDate" : "2019-05",
-    "company" : "한인 학생회 KSA 부회장",
+    "job-description" : "전산병 병장 만기제대",
     "is-development-career" : false,
-    "job-description" : ""
+    "task-list" : [
+      "작전사령부 7 전단 72 기동전대 대조영함 전산/통신병 업무 수행",
+      "작전사령부 5 전단 59 전대 육상 전산/행정병 업무 수행"
+    ]
   },
   {
     "fromDate" : "2013-01",
     "toDate" : "2013-08",
     "company" : "로보링크 인턴",
     "is-development-career" : true,
-    "job-description" : "휴머노이드 제작과 개발을 하여 여러 대회에 출전"
+    "job-description" : "로봇 교육 연구소의 인턴으로 대외활동과 업무보조에 적극 참여",
+    "task-list" : [
+      "휴머노이드 제작 및 대회 출전 경험을 통해 교육생들을 멘토링을 실시함.",
+      "교육생 개발보조 및 대외활동 보조를 통한 엔지니어링 개발 능력 강화.",
+      "블로그와 카페를 통해 개발 이력을 작성에 교육 연구소 홍보 성과를 이룸."
+    ]
   }
 ]

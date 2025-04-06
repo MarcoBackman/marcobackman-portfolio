@@ -1,17 +1,29 @@
 import "../stylesheet/ExperienceCard.css";
 import {useTranslation} from "../context/TranslationContext";
 import {calculateTotalYearMonth} from "../util/DateTimeUtil";
+import {useMemo, useState} from "react";
+import ProjectList from "./ProjectList";
 
 function ExperienceCard({data}) {
     const { language, setLanguage, messages } = useTranslation();
-    const experienceText = messages?.mainPage?.experience || {};
+    const experienceText = useMemo(() => messages?.mainPage?.experience || {}, [messages]);
+    const { projectList, setProjectList } = useState([]);
+    const {
+        fromDate,
+        toDate,
+        company,
+        "job-description": jobDescription,
+        "task-list": taskList,
+        "skills": skills,
+        "project-description" : projectDescription
+    } = data || {};
 
 
-    let { fromDate, toDate, company, "job-description": jobDescription, "task-list": taskList, "skills" : skills } = data;
-
-    let {isCurrentJob, years, months} = calculateTotalYearMonth(fromDate, toDate);
-
-    let totalYearMonth = `${years !== 0 ? years + "Y" : ""}  ${months !== 0 ? months + "M" : ""} `;
+    const {isCurrentJob, years, months} = calculateTotalYearMonth(fromDate, toDate);
+    const totalYearMonth = `${years !== 0 ? years + "Y" : ""}  ${months !== 0 ? months + "M" : ""} `;
+    const projectData = projectDescription && projectDescription.length > 0 && projectDescription.map((value) => {
+        return <ProjectList projectData={value}/>
+    });
 
     return (
         <div className={"experience-card"}>
@@ -56,6 +68,9 @@ function ExperienceCard({data}) {
                             </li>
                         )}
                     </ul>
+                </div>
+                <div className={"project-list"}>
+                    {projectData}
                 </div>
             </div>
         </div>

@@ -373,7 +373,7 @@ function MainPage() {
                 </div>
                 <div className={"experience-panel"}>
                     {careerData.map((data, index) => (
-                        <ExperienceCard key={index} data={data}/>
+                        (<ExperienceCard key={index} data={data}/>)
                     ))}
                 </div>
             </section>

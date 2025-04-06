@@ -15,7 +15,7 @@ export const TranslationProvider = ({ children }) => {
         // Retrieve saved language from localStorage or fallback to default 'en'
         return localStorage.getItem('appLanguage') || 'kr';
     });
-
+    const [isLoading, setIsLoading] = useState(true);
     const [messages, setMessages] = useState({});  // Stores translations
 
     // Load translation JSON file based on selected language
@@ -28,12 +28,11 @@ export const TranslationProvider = ({ children }) => {
                 }
                 const data = await response.json();
                 setMessages(data);
-                globalMessages = data;
             } catch (err) {
                 console.error('Error loading translations:', err);
-                setMessages({
-                    welcome: "Welcome" // A default fallback message
-                });
+                setMessages(""); // Default fallback
+            } finally {
+                setIsLoading(false);
             }
         };
 
@@ -43,6 +42,10 @@ export const TranslationProvider = ({ children }) => {
     useEffect(() => {
         localStorage.setItem('appLanguage', language);
     }, [language]);
+
+    if (isLoading) {
+        return <div>Loading translations...</div>; // Or provide a suitable fallback
+    }
 
     // The context values being provided
     return (
