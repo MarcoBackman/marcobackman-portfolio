@@ -1,9 +1,10 @@
 #main-page {
     display: block;
     position: relative;
-    margin-top: 100px;
     width: 100%;
     height: 100%;
+    max-width: 1240px;
+    margin: 150px auto;
 }
 
 #main-page::before {
@@ -21,6 +22,8 @@
 
 section.hero-section {
     height: 100vh;
+    width: calc(100% - 120px);
+    padding: 60px;
 }
 
 @keyframes fadeIn {

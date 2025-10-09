@@ -1,0 +1,17 @@
+div.dynamic-bubbles-canvas {
+    height: 332px;
+    max-width: 528px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+div.dynamic-bubbles-canvas::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: url('#noiseFilter');
+    pointer-events: none;
+}

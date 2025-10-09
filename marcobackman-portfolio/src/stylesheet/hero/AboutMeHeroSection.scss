@@ -1,0 +1,31 @@
+section#about-hero-section {
+  display: flex;
+  & div.about-me-hero-left-panel {
+    display: block;
+    width: 50%;
+
+    & div.about-me-details {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+
+      & div.about-me-details-item {
+        margin: 0;
+
+        & h4, p {
+          margin: 0;
+        }
+      }
+    }
+
+    & button.black-button {
+      margin-top: 1em;
+    }
+  }
+
+  & div.about-me-hero-right-panel {
+    display: block;
+    width: 50%;
+  }
+}

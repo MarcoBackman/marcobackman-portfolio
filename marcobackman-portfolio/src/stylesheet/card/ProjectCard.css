@@ -1,0 +1,84 @@
+/* --- Main Card Container --- */
+.project-card {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+}
+
+/* --- Image Wrapper & Zoom Effect --- */
+.project-image-wrapper {
+    position: relative;
+    height: 12rem; /* h-48 */
+    overflow: hidden; /* This is crucial for the zoom effect */
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* On card hover, scale the image inside the wrapper */
+.project-card:hover .project-image-wrapper img {
+    transform: scale(1.1);
+}
+
+/* --- Grainy Texture Overlay --- */
+.project-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* The URL-encoded SVG for the noise texture */
+    background-image: url("data:image/svg+xml,%3Csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter%20id='noise'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='.8'%20numOctaves='4'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23noise)'%20opacity='0.07'/%3E%3C/svg%3E");
+    pointer-events: none; /* Allows clicks to pass through to the image if needed */
+}
+
+
+/* --- Text Content --- */
+.project-text-wrapper {
+    padding: 1.5rem; /* p-6 */
+}
+
+.project-text-wrapper h3 {
+    font-size: 1.5rem; /* text-2xl */
+    line-height: 2rem;
+    font-weight: 700; /* font-bold */
+    color: #111827; /* text-gray-900 */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.project-text-wrapper p {
+    color: #4B5563; /* text-gray-600 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* --- "Call to Action" Link & Icon --- */
+.project-link {
+    color: #111827; /* text-gray-900 */
+    font-weight: 600; /* font-semibold */
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.project-link .arrow-icon {
+    margin-left: 0.5rem; /* ml-2 */
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-link:hover .arrow-icon {
+    transform: translateX(4px);
+}
