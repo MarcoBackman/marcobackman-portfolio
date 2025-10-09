@@ -1,0 +1,22 @@
+button.white-button {
+    background-color: #ffffff;
+    padding: 10px 1.8em;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    border: 1px solid #272727;
+    & a.white-button-text {
+        color: #000000;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+    }
+}
+
+button.white-button:hover {
+    background-color: rgb(221, 221, 221);
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 1px solid #aaaaaa;
+    & a.white-button-text {
+
+    }
+}

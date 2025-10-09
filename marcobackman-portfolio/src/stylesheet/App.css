@@ -1,5 +1,36 @@
+@font-face {
+  font-family: 'Hakgyoansim';
+  src: url('../assets/fonts/Hakgyoansim Badasseugi TTF L.ttf') format('');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HangamePokerMedium';
+  src: url('../assets/fonts/HangamePoker-Regular.ttf') format('');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenada';
+  src: url('../assets/fonts/Tenada.ttf') format('');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Railway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Licorice*/
+@import url('https://fonts.googleapis.com/css2?family=Licorice&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
   scroll-behavior: auto;
+  font-family: 'Playfair Display', serif;
 }
 
 body {

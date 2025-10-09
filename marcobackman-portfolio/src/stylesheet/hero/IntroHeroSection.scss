@@ -1,0 +1,30 @@
+section#intro-hero-section {
+  width: calc(100% - 120px);
+  padding: 60px;
+
+  & div.intro-hero-section-content-upper {
+
+    & div.intro-hero-button-wrapper {
+      display: flex;
+      justify-content: left;
+      margin-top: 2em;
+      
+      & button {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  & div.intro-hero-section-content-under {
+    width: 100%;
+    display: block;
+    margin-top: 2em;
+
+    & div.intro-hero-section-content-dynamic-card-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+  }
+}

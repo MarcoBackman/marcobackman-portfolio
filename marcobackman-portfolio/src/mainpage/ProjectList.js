@@ -1,3 +1,5 @@
+import "../stylesheet/ProjectList.css";
+
 const ProjectList = ({projectData}) => {
 
     if (!projectData || projectData.length === 0) return null;
@@ -33,9 +35,11 @@ const ProjectList = ({projectData}) => {
     return (
         <div className={"project-list-container"}>
             <div className={"top-section"}>
-                <h2 className={"project-title"}>{projectData.title}</h2>
-                <h1 className={"department-name"}>{projectData.department}</h1>
-                <h3 className={"year-month-label"}>
+                <div className={"tl-project-title"}>
+                    <h2 className={"project-title"}>{projectData.title}</h2>
+                    <h1 className={"department-name"}>{projectData.department}</h1>
+                </div>
+                <p className={"year-month-label"}>
                     {fromDate && new Date(fromDate).toLocaleDateString("ko-KR", {
                         year: "numeric",
                         month: "long"
@@ -43,10 +47,10 @@ const ProjectList = ({projectData}) => {
                     year: "numeric",
                     month: "long"
                 })}
-                </h3>
-                <div className={"project-detail"}>
-                    {taskTitleDescriptionSet}
-                </div>
+                </p>
+            </div>
+            <div className={"project-detail"}>
+                {taskTitleDescriptionSet}
             </div>
         </div>);
 }
