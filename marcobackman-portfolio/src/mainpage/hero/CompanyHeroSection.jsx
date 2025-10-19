@@ -4,9 +4,9 @@ import '../../stylesheet/hero/CompanyHeroSection.scss';
 function CompanyHeroSection() {
 
     return (
-        <div>
-
-        </div>
+        <section id={'company-hero-section'} className={'hero-section'}>
+            <h3></h3>
+        </section>
     )
 }
 

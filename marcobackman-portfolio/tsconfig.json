@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "jsx": "react-jsx",  // Or "react" if using React < 17
+    "resolveJsonModule": true,  // Optional if you're importing JSON files
+    "baseUrl": "./",
+    "paths": {
+      "*": ["*", "*.tsx", "*.ts", "*.js", "*.jsx"] // Add .tsx for automatic resolution
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
+}

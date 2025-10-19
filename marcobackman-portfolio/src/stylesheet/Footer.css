@@ -1,0 +1,93 @@
+cite.sns-icon {
+    height: 100%;
+    width: 24px;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    margin-right: 1em;
+
+    & a {
+        display: flex;
+    }
+
+    & a > img {
+        border-radius: 8px;
+        width: 24px;
+        height: 24px;
+        transition-duration: 0.5s;
+    }
+}
+
+cite.sns-icon > a > img:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    transition-duration: 0.5s;
+}
+
+
+
+footer#footer {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 270px;
+    margin: 3em 2em;
+    transform: translateY(100%);
+    /* Define the animation */
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+}
+
+#footer.footer-visible {
+    transform: translateY(-100%);
+}
+
+
+/* Left section */
+section.left-footer-section {
+    display: block;
+    width: calc(50% - 1em);
+    padding: 0 1em;
+}
+
+section.left-footer-section > h3 {
+    margin-bottom: 0;
+}
+
+section.left-footer-section > p {
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0.5em 0 3em 0;
+}
+
+div.footer-logo-section {
+    display: flex;
+}
+
+/* Right section */
+section.right-footer-section {
+    display: flex;
+    width: 50%;
+}
+
+section.right-footer-section > div.footer-link-section {
+    display: block;
+    width: calc(33% - 2em);
+    padding: 0 2em;
+}
+
+section.right-footer-section > div.footer-link-section > p {
+    display: block;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 500;
+    transition-duration: 0.3s;
+}
+
+section.right-footer-section > div.footer-link-section > p:hover {
+    color: rgba(0, 0, 0, 0.75);
+    transition-duration: 0.3s;
+    cursor: pointer;
+}

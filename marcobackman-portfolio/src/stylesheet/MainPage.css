@@ -1,50 +1,73 @@
-#main-page {
-    display: block;
+/*
+ * 1. Set up the main viewport wrapper
+ * This element fills the screen and hides overflow.
+ */
+.page-container {
     position: relative;
     width: 100%;
-    height: 100%;
-    max-width: 1240px;
-    margin: 150px auto;
 }
 
-#main-page::before {
+.page-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    overflow: hidden; /* Crucial: hides the other sections */
+}
+
+/*
+ * 2. This is the "filmstrip" container that moves up and down.
+ */
+#main-page {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+/*
+ * 3. Style each individual section (slide).
+ */
+.scroll-section {
+    height: 100vh;
+    width: 100%;
+    display: flex; /* Use flexbox to easily center the content */
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+ * 4. This is the div where your layout styles (max-width, margin) belong.
+ */
+.section-content {
+    max-width: 1240px;
+    width: 100%;
+    padding: 60px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+/*
+ * 5. Your fade-in animation and overlay
+ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s 0.4s ease-out, transform 0.6s 0.4s ease-out; /* Added a delay */
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Your gradient overlay. It attaches to the wrapper now. */
+.page-wrapper::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 120px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
-    filter: blur(0px);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
     pointer-events: none;
     z-index: 8;
-}
-
-section.hero-section {
-    height: 100vh;
-    width: calc(100% - 120px);
-    padding: 60px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Slight upward movement */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Reset movement */
-    }
-}
-
-.fade-in {
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start shifted slightly down */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
-}
-
-/* When the section is visible, fully fade in */
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
 }

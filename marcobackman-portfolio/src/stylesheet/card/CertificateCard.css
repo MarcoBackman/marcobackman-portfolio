@@ -1,0 +1,57 @@
+div.certificate-card {
+    display: block;
+    width: 220px;
+    min-width: 220px;
+    height: 180px;
+    padding: 1em 2em;
+    border-radius: 16px;
+    border: 1px solid rgba(174, 171, 171, 0.63);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.certificate-card-text-wrapper {
+    display: flex;
+    height: 50%;
+}
+
+div.certificate-card-text-wrapper > p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+div.certificate-image-wrapper {
+    display: flex;
+    height: 50%;
+    align-self: baseline;
+    align-content: baseline;
+    align-items: center;
+}
+
+div.certificate-image-wrapper > img {
+    display: flex;
+    height: auto;
+    width: 100%;
+    margin-right: 1em;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 16px;
+}
+
+div.certificate-logo-wrapper {
+    display: block;
+}
+
+div.certificate-logo-wrapper > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1em 0 0 0;
+}
+
+div.certificate-logo-wrapper > p {
+    margin: 0 0 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.5);
+}

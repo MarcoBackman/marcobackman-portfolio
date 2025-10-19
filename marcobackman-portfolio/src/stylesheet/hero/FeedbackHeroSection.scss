@@ -1,0 +1,71 @@
+section#feedback-hero-section {
+  display: flex;
+  & div.feedback-left-text-section {
+    display: flex;
+    width: calc(50% - 2em);
+    h1 {
+      width: 80%;
+    }
+  }
+
+  & div.feedback-right-review-card-section {
+    display: flex;
+    width: calc(50% - 2em);
+    height: 100%;
+
+    & div.review-card-wrapper {
+      display: grid;
+      width: calc(100% - 2em);
+      max-height: 750px;
+      gap: 2em;
+      grid-template-columns: 1fr;
+      grid-template-rows:  1fr 1fr 1fr;
+    }
+  }
+}
+
+//Card Module
+div.review-card {
+  display: block;
+  width: calc(100% - 16px);
+  min-height: 166px;
+  max-height: 196px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 16px;
+
+  & div.review-card-title {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+    & svg {
+      display: flex;
+      width: 10%;
+      height: 25%;
+      margin-top: 7px;
+      fill: rgba(0, 0, 0, 0.45);
+      align-items: center;
+      align-self: center;
+      align-content: center;
+    }
+
+    & h1 {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+    }
+  }
+
+  & p {
+    display: flex;
+    color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: auto;
+    margin-left: 12px;
+  }
+}

@@ -21,8 +21,11 @@ const ProjectCard: React.FC<ProjectCardProps> = (
             <div className={'project-text-wrapper'}>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <a className={'white-button-text'} href={link}>
+                <a className={'project-link'} href={link}>
                     See Project
+                    <div className={'.arrow-icon'}>
+                        &nbsp;&nbsp;→
+                    </div>
                 </a>
             </div>
         </div>

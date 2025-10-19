@@ -1,47 +1,19 @@
-@font-face {
-  font-family: 'Hakgyoansim';
-  src: url('../assets/fonts/Hakgyoansim Badasseugi TTF L.ttf') format('');
-  font-weight: normal;
-  font-style: normal;
+/* Make the main App container a full-height scrollable area */
+.app-container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-@font-face {
-  font-family: 'HangamePokerMedium';
-  src: url('../assets/fonts/HangamePoker-Regular.ttf') format('');
-  font-weight: normal;
-  font-style: normal;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* This is key! */
+  background-color: #fff; /* Or your desired page background */
 }
-
-@font-face {
-  font-family: 'Tenada';
-  src: url('../assets/fonts/Tenada.ttf') format('');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/*Roboto*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*Railway*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*Licorice*/
-@import url('https://fonts.googleapis.com/css2?family=Licorice&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-html {
-  scroll-behavior: auto;
-  font-family: 'Playfair Display', serif;
-}
-
-body {
-  overflow: auto;
-  position: relative;
-  cursor: default;
-}
-
 
 .main {
-  display: flex;
+  display: block;
   width: 100%;
 }
 
@@ -49,11 +21,6 @@ button {
   border: none;
   color: #495867;
   background-color: transparent;
-}
-
-a {
-  text-decoration: none;
-  font-family: Tenada, sans-serif;
 }
 
 .scroll-to-top {

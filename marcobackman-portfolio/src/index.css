@@ -1,18 +1,4 @@
 @font-face {
-  font-family: 'Hakgyoansim';
-  src: url('./assets/fonts/Hakgyoansim Badasseugi TTF L.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Tenada';
-  src: url('./assets/fonts/Tenada.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'HangamePokerBold';
   src: url('./assets/fonts/HangamePoker-Bold.ttf');
   font-weight: normal;
@@ -40,16 +26,63 @@
   font-style: normal;
 }
 
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Railway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Licorice*/
+@import url('https://fonts.googleapis.com/css2?family=Licorice&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 38px
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'HangamePokerRegular', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  font-family: Railway, sans-serif;
+}
+
+a {
+  font-family: HangamePokerSemiBold, sans-serif;
+}
+
+label {
+  font-family: Roboto, sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+hr {
+  border: none; /* Reset default browser styling */
+  border-top: 1px solid #ccc; /* Solid gray line */
+  margin: 20px 3em; /* Add some vertical spacing */
 }
